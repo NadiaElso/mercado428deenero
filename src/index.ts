@@ -1,65 +1,3 @@
-console.log("Supermercado Madariaga");
-console.log("productos disponibles");
-console.log(
-  "Leche,azucar,yogurt, manteca, queso, fideos, salsa de tomate,aceite, crema de leche, dulce de leche, galletitas"
-);
-console.log("stock de los productos disponibles");
-console.log(
-  "4 packs de leche, 1 pack de azucar, 5 yogures, 4 mantecas, 4 quesos, 10 fideos, 10 salsa de tomates, 4 crema de leches, 6 paquetes de galletitas"
-);
-
-let nombreDesupermercado: string = "Madariaga";
-let productosDisponibles: string =
-  "Leche,Azucar, Yogurt, manteca, queso, fideos, salsa de tomate, aceite, crema de leche, dulce de leche, galletitas";
-let stockLeche: number = 15;
-let stockAzucar: number = 9;
-let stockYogurt: number = 20;
-let stockManteca: number = 10;
-let stockQueso: number = 10;
-let stockFideos: number = 20;
-let stockSalsaDeTomate: number = 30;
-let StockAceite: number = 15;
-let StockCremaDeLeche: number = 9;
-let stockDulceDeLeche: number = 7;
-let stockGalletitas: number = 20;
-
-console.log(nombreDesupermercado);
-console.log(productosDisponibles);
-console.log("Stock de leche:" + stockLeche);
-console.log("Stock de Azucar" + stockAzucar);
-console.log("Stock de Manteca" + stockManteca);
-console.log("Stock de Queso" + stockQueso);
-console.log("Stock de Fideos" + stockFideos);
-console.log("Stock de Salsa de Tomates" + stockSalsaDeTomate);
-console.log("Stock de Crema de Leche" + StockCremaDeLeche);
-console.log("Stock de Dulce de Leche" + stockDulceDeLeche);
-console.log("Stock de Galletitas" + stockGalletitas);
-console.log("Stock de Aceite" + StockAceite);
-console.log("Stock de Yogurt" + stockYogurt);
-
-let precioLeche: number = 100;
-let precioAzucar: number = 90;
-let precioYogurt: number = 130;
-let precioManteca: number = 80;
-let precioQueso: number = 120;
-let precioFideos: number = 70;
-let preciosalsaDeTomates: number = 80;
-let precioAceite: number = 90;
-let precioCremaDeLeche: number = 90;
-let precioDulceDeLeche: number = 60;
-let precioGalletitas: number = 40;
-
-console.log("El precio unitario es:" + precioLeche);
-console.log("El  precio unitario es:" + precioAzucar);
-console.log("El precio unitario es:" + precioYogurt);
-console.log("EL precio unitario es:" + precioManteca);
-console.log("El precio unitario es" + precioQueso);
-console.log("El precio unitario es:" + precioFideos);
-console.log("El precio unitario es:" + preciosalsaDeTomates);
-console.log("El precion unitario es:" + precioGalletitas);
-console.log("El precion unitario es:" + precioCremaDeLeche);
-console.log("El precion unitario es:" + precioDulceDeLeche);
-
 let ingresoproductonuevos1: string = String(
   prompt("ingreso de  producto nuevo 1")
 );
@@ -122,3 +60,57 @@ if (stockinicialdelosproductosnuevos3 > 0 && preciodelosproductosnuevos3 > 0) {
 console.log(
   `El tercer producto agregado es: ${productonuevo3} $ ${precioproductonuevo3} con su stock inicial  de ${stocknuevoproducto3}`
 );
+
+console.log("Bienvenidos a Mercado 4");
+console.log(
+  `Los productos disponibles son ${productonuevo1}$  ${precioproductonuevo1} hay en stock ${stocknuevoproducto1}`
+);
+console.log(
+  `Los productos disponibles son ${productonuevo2}$  ${precioproductonuevo2} hay en stock ${stocknuevoproducto2}`
+);
+console.log(
+  `Los productos disponibles son ${productonuevo3}$  ${precioproductonuevo3} hay en stock ${stocknuevoproducto3}`
+);
+
+let compradeunproducto: string = String(prompt("Que producto desea comprar"));
+let cantidadacomprar: number = Number(prompt("Cuantos desea comprar"));
+let compradeproducto: string = "";
+let cantidaddecompradeproducto: number = 0;
+let totaldecompra: number = 0;
+let stockdisponible: number = 0;
+if (
+  compradeunproducto === productonuevo1 &&
+  cantidadacomprar <= stocknuevoproducto1
+) {
+  compradeproducto = compradeunproducto;
+  cantidaddecompradeproducto = cantidadacomprar;
+  totaldecompra = precioproductonuevo1 * cantidaddecompradeproducto;
+  stockdisponible = stocknuevoproducto1 - cantidaddecompradeproducto;
+  console.log(
+    `La compra que realizaste: ${compradeproducto} $ ${precioproductonuevo1}, la cantidad que compraste ${cantidaddecompradeproducto}, total a pagar ${totaldecompra} y el stock disponible es: ${stockdisponible}`
+  );
+} else if (
+  compradeunproducto === productonuevo2 &&
+  cantidadacomprar <= stocknuevoproducto2
+) {
+  compradeproducto = compradeunproducto;
+  cantidaddecompradeproducto = cantidadacomprar;
+  totaldecompra = precioproductonuevo2 * cantidaddecompradeproducto;
+  stockdisponible = stocknuevoproducto2 - cantidaddecompradeproducto;
+  console.log(
+    `La compra que realizaste: ${compradeproducto} $ ${precioproductonuevo2}, la cantidad que compraste ${cantidaddecompradeproducto}, total a pagar ${totaldecompra} y el stock disponible es: ${stockdisponible}`
+  );
+} else if (
+  compradeunproducto === productonuevo3 &&
+  cantidadacomprar <= stocknuevoproducto3
+) {
+  compradeproducto = compradeunproducto;
+  cantidaddecompradeproducto = cantidadacomprar;
+  totaldecompra = precioproductonuevo3 * cantidaddecompradeproducto;
+  stockdisponible = stocknuevoproducto3 - cantidaddecompradeproducto;
+  console.log(
+    `La compra que realizaste: ${compradeproducto} $ ${precioproductonuevo2}, la cantidad que compraste ${cantidaddecompradeproducto}, total a pagar ${totaldecompra} y el stock disponible es: ${stockdisponible}`
+  );
+} else {
+  console.log("No hay stock del producto que desea comprar;");
+}
